@@ -1,0 +1,11 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+:root{--bg:#10151D;--bg2:#1A202B;--card:#202938;--tx:#FFFFFF;--mut:#AAB4C1;--bd:#303B49}
+:root.light{--bg:#F5F6F8;--bg2:#FFFFFF;--card:#FFFFFF;--tx:#10151D;--mut:#5B6675;--bd:#E1E5EB}
+body{@apply bg-app text-tx font-sans antialiased}
+@layer components{
+.card{@apply bg-card border border-line rounded-2xl p-5}
+.btn{@apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold bg-brand text-white transition hover:opacity-90 active:scale-95}
+.btn2{@apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold border border-line text-tx transition hover:bg-side active:scale-95}
+.inp{@apply w-full rounded-xl border border-line bg-app px-3 py-2.5 text-sm text-tx outline-none focus:border-brand}}
+@keyframes pop{0%{transform:scale(.6)}60%{transform:scale(1.25)}100%{transform:scale(1)}}
+.pop{animation:pop .3s ease}
